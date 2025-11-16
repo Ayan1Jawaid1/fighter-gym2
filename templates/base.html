@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fighter Gym</title>
+    <!-- FORCE NO CACHE + FRESH CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}?v={{ range(1,999999)|random }}">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+</head>
+<body>
+    <header>
+        <h1>FIGHTER GYM</h1>
+        <nav>
+            <a href="/">Home</a>
+            <a href="/about">About Us</a>
+            <a href="/membership">Membership</a>
+        </nav>
+    </header>
+
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer>
+        <p>© 2025 Fighter Gym. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
